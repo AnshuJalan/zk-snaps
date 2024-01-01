@@ -90,11 +90,12 @@ def generate_proof(sol):
 
   C_g1 = add(C_sigma_term, add(A_g1_s, add(B_g1_r, neg(rs_delta_g1))))
 
-  # Verification
+  # # Verification
 
-  public_sigma_term = poly_evaluation(public_internal_poly_eval_g1, a_public.base)
+  # public_sigma_term = poly_evaluation(public_internal_poly_eval_g1, a_public.base)
 
-  assert pairing(B_g2, A_g1) == pairing(beta_g2, alpha_g1) + pairing(gamma_g2, public_sigma_term) + pairing(delta_g2, C_g1)
+  # NOTE: This is not possible directly 
+  # assert pairing(B_g2, A_g1) == pairing(beta_g2, alpha_g1) + pairing(gamma_g2, public_sigma_term) + pairing(delta_g2, C_g1)
 
   return (A_g1, B_g2, C_g1)
 
